@@ -3,11 +3,11 @@
 production: &production
   adapter: redis
   url: redis://redistogo:92627ef52683cc9a240a99fa20eab572@viperfish.redistogo.com:11395
-  host: viperfish.redistogo.com
-  port: 10272
-  password: 92627ef52683cc9a240a99fa20eab572
-  inline: true
-  timeout: 1
+  # host: viperfish.redistogo.com
+  # port: 10272
+  # password: 92627ef52683cc9a240a99fa20eab572
+  # inline: true
+  # timeout: 1
 
 development: &development
   adapter: redis
