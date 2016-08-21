@@ -80,4 +80,5 @@ Rails.application.configure do
   # config.middleware.use(GameChannel)
   config.web_socket_server_url = 'wss://arcane-sierra-70763.herokuapp.com/'
   config.action_cable.allowed_request_origins = ['https://arcane-sierra-70763.herokuapp.com/']
+  config.action_cable.url = 'wss://arcane-sierra-70763.herokuapp.com/'
 end
