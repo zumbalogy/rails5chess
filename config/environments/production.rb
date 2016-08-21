@@ -78,7 +78,7 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # config.middleware.use(GameChannel)
-  config.web_socket_server_url = 'wss://arcane-sierra-70763.herokuapp.com/'
+  config.web_socket_server_url = 'wss://arcane-sierra-70763.herokuapp.com/cable'
   config.action_cable.allowed_request_origins = ['https://arcane-sierra-70763.herokuapp.com/']
-  config.action_cable.url = 'wss://arcane-sierra-70763.herokuapp.com/'
+  config.action_cable.url = 'wss://arcane-sierra-70763.herokuapp.com/cable'
 end
