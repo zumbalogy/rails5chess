@@ -77,6 +77,7 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  config.middleware.use(GameChannel)
+  # config.middleware.use(GameChannel)
   config.web_socket_server_url = 'wss://arcane-sierra-70763.herokuapp.com/'
+  config.action_cable.allowed_request_origins = ['https://arcane-sierra-70763.herokuapp.com/']
 end
