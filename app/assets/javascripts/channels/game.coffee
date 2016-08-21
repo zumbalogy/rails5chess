@@ -1,22 +1,22 @@
-App.game = App.cable.subscriptions.create "GameChannel",
+App.game = App.cable.subscriptions.create 'GameChannel',
   connected: ->
-    @printMessage("Waiting for opponent...")
+    @printMessage('Waiting for opponent...')
 
   received: (data) ->
     switch data.action
-      when "game_start"
-        App.board.position("start")
+      when 'game_start'
+        App.board.position('start')
         App.board.orientation(data.msg)
         @printMessage("Game started! You play as #{data.msg}.")
-      when "make_move"
-        [source, target] = data.msg.split("-")
+      when 'make_move'
+        [source, target] = data.msg.split('-')
         App.chess.move
           from: source
           to: target
-          promotion: "q"
+          promotion: 'q'
         App.board.position(App.chess.fen())
-      when "opponent_forfeits"
-        @printMessage("Opponent forfeits. You win!")
+      when 'opponent_forfeits'
+        @printMessage('Opponent forfeits. You win!')
 
   printMessage: (message) ->
-    $("#messages").append("<p>#{message}</p>")
+    $('#messages').append("<p>#{message}</p>")
